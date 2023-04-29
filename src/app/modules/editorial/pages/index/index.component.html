@@ -22,7 +22,7 @@
         <a [routerLink]="['/editorial/edit', element.id]"  mat-icon-button color="accent" aria-label="Example icon button with a home icon">
             <mat-icon>edit</mat-icon>
         </a>
-        <button mat-icon-button color="warn" >
+        <button (click)="onRemoveEditorial(element)" mat-icon-button color="warn" >
             <mat-icon>delete</mat-icon>
         </button>
       </td>

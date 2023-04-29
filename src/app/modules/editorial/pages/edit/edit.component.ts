@@ -31,7 +31,7 @@ export class EditComponent {
 
       this.idEditorial = Number(params['id']);
 
-      this.editorialService.getEditorialeById(this.idEditorial)
+      this.editorialService.getEditorialById(this.idEditorial)
         .subscribe(data=>this.editorial = data);
 
     });
