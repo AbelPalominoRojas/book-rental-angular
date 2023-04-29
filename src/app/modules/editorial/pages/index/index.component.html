@@ -19,10 +19,10 @@
         <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
             <mat-icon>search</mat-icon>
         </button>
-        <button mat-icon-button color="accent" aria-label="Example icon button with a home icon">
+        <a [routerLink]="['/editorial/edit', element.id]"  mat-icon-button color="accent" aria-label="Example icon button with a home icon">
             <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-icon-button color="warn" aria-label="Example icon button with a home icon">
+        </a>
+        <button mat-icon-button color="warn" >
             <mat-icon>delete</mat-icon>
         </button>
       </td>

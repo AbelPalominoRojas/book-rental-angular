@@ -15,7 +15,15 @@ export class EditorialService {
     return this.http.get<EditorialModel[]>('http://localhost:8080/editoriales');
   }
 
+  getEditorialeById(id: number){
+    return this.http.get<EditorialModel>(`http://localhost:8080/editoriales/${id}`);
+  }
+
   createEditorial(payload: EditorialModel){
     return this.http.post<EditorialModel>('http://localhost:8080/editoriales',payload);
+  }
+
+  editEditorial(id: number,payload: EditorialModel){
+    return this.http.put<EditorialModel>(`http://localhost:8080/editoriales/${id}`, payload);
   }
 }

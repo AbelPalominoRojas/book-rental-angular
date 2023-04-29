@@ -12,12 +12,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { EditorialRoutingModule } from './editorial-routing.module';
 import { IndexComponent } from './pages/index/index.component';
 import { CreateComponent } from './pages/create/create.component';
+import { EditComponent } from './pages/edit/edit.component';
 
 
 @NgModule({
   declarations: [
     IndexComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
