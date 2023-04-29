@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { EditorialService } from '@/services/editorial.service';
+import { EditorialModel } from '@/models';
 
 @Component({
   selector: 'app-index',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
+
+  editoriales: EditorialModel[] = [];
+  displayedColumns: string[] = ['acciones','id', 'codigo', 'nombre', 'fechaRegistro', 'estado'];
+
+  constructor(
+    private editorialService: EditorialService
+  ) {}
+
+  ngOnInit(){
+    this.editorialService.getAllEditoriales()
+      .subscribe(data => this.editoriales = data);
+  }
 
 }
