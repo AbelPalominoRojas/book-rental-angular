@@ -14,4 +14,8 @@ export class EditorialService {
   getAllEditoriales(){
     return this.http.get<EditorialModel[]>('http://localhost:8080/editoriales');
   }
+
+  createEditorial(payload: EditorialModel){
+    return this.http.post<EditorialModel>('http://localhost:8080/editoriales',payload);
+  }
 }
